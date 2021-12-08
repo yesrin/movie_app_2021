@@ -1,9 +1,16 @@
 import React from "react";
-import Home from './routes/Home';
-import './App.css'
+import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import About from './routes/About';
 
 function App(){
-  return <Home/>;
+  return (
+      <Router>
+        <Routes>
+          <Route path="/about" component={About} />
+        </Routes>
+      </Router>
+  );
 }
 
 export default App;
